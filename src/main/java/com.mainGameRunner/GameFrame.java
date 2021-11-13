@@ -23,6 +23,11 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import java.awt.event.WindowListener;
+import elements.ballProperties.*;
+import elements.brickProperties.*;
+import elements.wallProperties.*;
+import elements.homeMenu.*;
+import elements.playerProperties.*;
 
 
 public class GameFrame extends JFrame implements WindowFocusListener {

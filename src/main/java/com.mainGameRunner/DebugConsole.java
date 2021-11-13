@@ -21,6 +21,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import elements.ballProperties.*;
+import elements.brickProperties.*;
+import elements.wallProperties.*;
+import elements.homeMenu.*;
+import elements.playerProperties.*;
 
 public class DebugConsole extends JDialog implements WindowListener{
 

@@ -21,6 +21,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.font.FontRenderContext;
+import elements.ballProperties.*;
+import elements.brickProperties.*;
+import elements.wallProperties.*;
+import elements.homeMenu.*;
+import elements.playerProperties.*;
 
 
 

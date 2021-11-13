@@ -15,7 +15,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.mainGameRunner;
+package elements.homeMenu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,6 +24,11 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
+import elements.ballProperties.*;
+import elements.brickProperties.*;
+import com.mainGameRunner.*;
+import elements.playerProperties.*;
+import elements.wallProperties.*;
 
 
 public class HomeMenu extends JComponent implements MouseListener, MouseMotionListener {

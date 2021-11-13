@@ -15,10 +15,16 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.mainGameRunner;
+package elements.wallProperties;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;
+import elements.ballProperties.*;
+import elements.brickProperties.*;
+import com.mainGameRunner.*;
+import elements.playerProperties.*;
+import elements.homeMenu.*;
 
 
 public class Wall {
@@ -32,9 +38,9 @@ public class Wall {
     private Random rnd;
     private Rectangle area;
 
-    Brick[] bricks;
-    Ball ball;
-    Player player;
+    public Brick[] bricks;
+    public Ball ball;
+    public Player player;
 
     private Brick[][] levels;
     private int level;

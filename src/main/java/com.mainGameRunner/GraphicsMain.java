@@ -18,6 +18,11 @@ package com.mainGameRunner;/*
 //package test;
 
 import java.awt.*;
+import elements.ballProperties.*;
+import elements.brickProperties.*;
+import elements.wallProperties.*;
+import elements.homeMenu.*;
+import elements.playerProperties.*;
 
 
 public class GraphicsMain {

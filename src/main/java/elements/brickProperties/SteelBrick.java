@@ -15,8 +15,12 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.mainGameRunner;
+package elements.brickProperties;
 
+import com.mainGameRunner.*;
+import elements.wallProperties.*;
+import elements.homeMenu.*;
+import elements.playerProperties.*;
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;
