@@ -17,14 +17,9 @@
  */
 package elements.playerProperties;
 
+import elements.ballProperties.Ball;
+
 import java.awt.*;
-import java.awt.geom.Point2D;
-import java.awt.geom.Rectangle2D;
-import elements.ballProperties.*;
-import elements.brickProperties.*;
-import com.mainGameRunner.*;
-import elements.homeMenu.*;
-import elements.wallProperties.*;
 
 
 public class Player {

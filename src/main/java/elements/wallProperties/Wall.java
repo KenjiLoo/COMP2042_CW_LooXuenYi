@@ -17,14 +17,17 @@
  */
 package elements.wallProperties;
 
+import elements.ballProperties.Ball;
+import elements.ballProperties.RubberBall;
+import elements.brickProperties.Brick;
+import elements.brickProperties.CementBrick;
+import elements.brickProperties.ClayBrick;
+import elements.brickProperties.SteelBrick;
+import elements.playerProperties.Player;
+
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;
-import elements.ballProperties.*;
-import elements.brickProperties.*;
-import com.mainGameRunner.*;
-import elements.playerProperties.*;
-import elements.homeMenu.*;
 
 
 public class Wall {

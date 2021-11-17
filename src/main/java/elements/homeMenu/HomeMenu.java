@@ -17,6 +17,8 @@
  */
 package elements.homeMenu;
 
+import com.mainGameRunner.GameFrame;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -24,11 +26,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
-import elements.ballProperties.*;
-import elements.brickProperties.*;
-import com.mainGameRunner.*;
-import elements.playerProperties.*;
-import elements.wallProperties.*;
 
 
 public class HomeMenu extends JComponent implements MouseListener, MouseMotionListener {

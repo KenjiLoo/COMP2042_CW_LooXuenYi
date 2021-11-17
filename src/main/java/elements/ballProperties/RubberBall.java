@@ -16,10 +16,6 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package elements.ballProperties;
-import com.mainGameRunner.*;
-import elements.wallProperties.*;
-import elements.homeMenu.*;
-import elements.playerProperties.*;
 
 import java.awt.*;
 import java.awt.geom.Ellipse2D;

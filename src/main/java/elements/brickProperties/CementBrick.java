@@ -1,13 +1,8 @@
 package elements.brickProperties;
 
-import com.mainGameRunner.*;
-import elements.wallProperties.*;
-import elements.homeMenu.*;
-import elements.playerProperties.*;
 import java.awt.*;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
-
 
 public class CementBrick extends Brick {
 

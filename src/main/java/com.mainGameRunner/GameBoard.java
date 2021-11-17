@@ -17,15 +17,15 @@
  */
 package com.mainGameRunner;
 
+import elements.ballProperties.Ball;
+import elements.brickProperties.Brick;
+import elements.playerProperties.Player;
+import elements.wallProperties.Wall;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.font.FontRenderContext;
-import elements.ballProperties.*;
-import elements.brickProperties.*;
-import elements.wallProperties.*;
-import elements.homeMenu.*;
-import elements.playerProperties.*;
 
 
 

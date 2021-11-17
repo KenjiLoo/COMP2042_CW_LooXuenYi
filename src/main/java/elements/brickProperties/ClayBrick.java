@@ -1,13 +1,6 @@
 package elements.brickProperties;
 
-import com.mainGameRunner.*;
-import elements.wallProperties.*;
-import elements.homeMenu.*;
-import elements.playerProperties.*;
 import java.awt.*;
-import java.awt.Point;
-import java.awt.geom.Point2D;
-
 
 /**
  * Created by filippo on 04/09/16.
