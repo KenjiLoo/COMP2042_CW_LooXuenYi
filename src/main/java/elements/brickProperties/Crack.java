@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 import java.lang.*;
+import java.lang.reflect.GenericDeclaration;
+import java.lang.reflect.TypeVariable;
 import java.util.*;
 
 
@@ -15,9 +17,6 @@ import java.util.*;
  * @author LooXuenYi
  */
 public class Crack{
-
-
-    final Brick outer;
 
     private static final int CRACK_SECTIONS = 3;
     private static final double JUMP_PROBABILITY = 0.7;
@@ -34,8 +33,7 @@ public class Crack{
     private int crackDepth;
     private int steps;
 
-    Brick brick;
-
+    final Brick outer;
 
     /**
      * This constructor defines the behavior of the cracks
@@ -43,11 +41,12 @@ public class Crack{
      * @param crackDepth
      * @param steps
      */
-    public Crack(int crackDepth, int steps){
+    public Crack(int crackDepth, int steps, Brick outer){
 
         crack = new GeneralPath();
         this.crackDepth = crackDepth;
         this.steps = steps;
+        this.outer = outer;
 
     }
 
@@ -75,8 +74,7 @@ public class Crack{
      * @param direction
      */
     protected void makeCrack(Point2D point, int direction){
-        Rectangle bounds;
-        bounds = Brick.this.brickFace.getBounds();
+        Rectangle bounds = outer.brickFace.getBounds();
 
         Point impact = new Point((int)point.getX(),(int)point.getY());
         Point start = new Point();
