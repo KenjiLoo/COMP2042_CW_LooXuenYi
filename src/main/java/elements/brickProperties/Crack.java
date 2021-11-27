@@ -16,7 +16,9 @@ import java.util.*;
  */
 public class Crack{
 
+
     final Brick outer;
+
     private static final int CRACK_SECTIONS = 3;
     private static final double JUMP_PROBABILITY = 0.7;
     private Random rnd;
