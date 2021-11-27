@@ -1,4 +1,8 @@
-package com.mainGameRunner;/*
+package com.mainGameRunner;
+
+import java.awt.*;
+
+/*
  *  Brick Destroy - A simple Arcade video game
  *   Copyright (C) 2017  Filippo Ranza
  *
@@ -15,12 +19,20 @@ package com.mainGameRunner;/*
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-//package test;
 
-import java.awt.*;
-
+/**
+ * This class is the main class that executes the software
+ *
+ * Refactored by:
+ * @author LooXuenYi
+ */
 public class GraphicsMain {
 
+    /**
+     * This method is the main method that runs the software
+     *
+     * @param args
+     */
     public static void main(String[] args){
         EventQueue.invokeLater(() -> new GameFrame().initialize());
     }

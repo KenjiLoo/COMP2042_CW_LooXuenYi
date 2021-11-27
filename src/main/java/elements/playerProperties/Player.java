@@ -21,7 +21,12 @@ import elements.ballProperties.Ball;
 
 import java.awt.*;
 
-
+/**
+ * This class specifies the properties of the Player, the green bar, that appears when the game starts
+ *
+ * Rfactored by:
+ * @author LooXuenYi
+ */
 public class Player {
 
 
@@ -36,7 +41,14 @@ public class Player {
     private int min;
     private int max;
 
-
+    /**
+     * This constructor defines all neccesary properties for the player to be used
+     *
+     * @param ballPoint
+     * @param width
+     * @param height
+     * @param container
+     */
     public Player(Point ballPoint,int width,int height,Rectangle container) {
         this.ballPoint = ballPoint;
         moveAmount = 0;
@@ -46,15 +58,31 @@ public class Player {
 
     }
 
+    /**
+     * This method defines the shape and size fo the player
+     *
+     * @param width
+     * @param height
+     * @return
+     */
     private Rectangle makeRectangle(int width,int height){
         Point p = new Point((int)(ballPoint.getX() - (width / 2)),(int)ballPoint.getY());
         return  new Rectangle(p,new Dimension(width,height));
     }
 
+    /**
+     * This method specifies what happens when the ball touches the player
+     *
+     * @param b
+     * @return
+     */
     public boolean impact(Ball b){
         return playerFace.contains(b.getPosition()) && playerFace.contains(b.down) ;
     }
 
+    /**
+     * This method specifies hwo the player should move
+     */
     public void move(){
         double x = ballPoint.getX() + moveAmount;
         if(x < min || x > max)
@@ -63,22 +91,40 @@ public class Player {
         playerFace.setLocation(ballPoint.x - (int)playerFace.getWidth()/2,ballPoint.y);
     }
 
+    /**
+     * This method is used to allow the player to move left
+     */
     public void moveLeft(){
         moveAmount = -DEF_MOVE_AMOUNT;
     }
 
+    /**
+     * This method is used to allow the player to move right
+     */
     public void movRight(){
         moveAmount = DEF_MOVE_AMOUNT;
     }
 
+    /**
+     * This method defines how the player should behave when its stopped
+     */
     public void stop(){
         moveAmount = 0;
     }
 
+    /**
+     * This method returns the look of the player
+     *
+     * @return
+     */
     public Shape getPlayerFace(){
         return  playerFace;
     }
 
+    /**
+     * This method specifies what happens when the player moves, how it changes position
+     * @param p
+     */
     public void moveTo(Point p){
         ballPoint.setLocation(p);
         playerFace.setLocation(ballPoint.x - (int)playerFace.getWidth()/2,ballPoint.y);

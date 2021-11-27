@@ -3,7 +3,10 @@ package elements.brickProperties;
 import java.awt.*;
 
 /**
- * Created by filippo on 04/09/16.
+ * This class specifies the properties of the gray clay brick seen in the gameplay
+ *
+ * Refactored by:
+ * @author LooXuenYi
  *
  */
 public class ClayBrick extends Brick {
@@ -13,11 +16,12 @@ public class ClayBrick extends Brick {
     private static final Color DEF_BORDER = Color.GRAY;
     private static final int CLAY_STRENGTH = 1;
 
-
-
-
-
-
+    /**
+     * THis constructor specifies the point (location) of the clay brick and dimensions, with the properties specified in the abstract class "Brick"
+     *
+     * @param point
+     * @param size
+     */
     public ClayBrick(Point point, Dimension size){
         super(NAME,point,size,DEF_BORDER,DEF_INNER,CLAY_STRENGTH);
     }
@@ -27,6 +31,11 @@ public class ClayBrick extends Brick {
         return new Rectangle(pos,size);
     }
 
+    /**
+     * This method returns the brick's looks from the super class "Brick"
+     *
+     * @return
+     */
     @Override
     public Shape getBrick() {
         return super.brickFace;

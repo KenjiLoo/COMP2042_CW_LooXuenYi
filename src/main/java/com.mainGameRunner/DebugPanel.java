@@ -24,12 +24,15 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
 
-
-
+/**
+ * This class defines the style and layout of the debug console
+ *
+ * Refactored by:
+ * @author LooXuenYi
+ */
 public class DebugPanel extends JPanel {
 
     private static final Color DEF_BKG = Color.WHITE;
-
 
     private JButton skipLevel;
     private JButton resetBalls;
@@ -39,6 +42,11 @@ public class DebugPanel extends JPanel {
 
     private Wall wall;
 
+    /**
+     * This constructor renders all the components in the debug console
+     *
+     * @param wall
+     */
     public DebugPanel(Wall wall){
 
         this.wall = wall;
@@ -59,17 +67,35 @@ public class DebugPanel extends JPanel {
 
     }
 
+    /**
+     * This method defines the layout of the debug console
+     */
     private void initialize(){
         this.setBackground(DEF_BKG);
         this.setLayout(new GridLayout(2,2));
     }
 
+    /**
+     * This method defines the style of the button
+     *
+     * @param title
+     * @param e
+     * @return
+     */
     private JButton makeButton(String title, ActionListener e){
         JButton out = new JButton(title);
         out.addActionListener(e);
         return  out;
     }
 
+    /**
+     * This method defines the slider component in the debug console and make it functional
+     *
+     * @param min
+     * @param max
+     * @param e
+     * @return
+     */
     private JSlider makeSlider(int min, int max, ChangeListener e){
         JSlider out = new JSlider(min,max);
         out.setMajorTickSpacing(1);
@@ -79,9 +105,16 @@ public class DebugPanel extends JPanel {
         return out;
     }
 
+    /**
+     * This method allows the user to change the ball speed from the debug console
+     *
+     * @param x
+     * @param y
+     */
     public void setValues(int x,int y){
         ballXSpeed.setValue(x);
         ballYSpeed.setValue(y);
     }
 
+    
 }

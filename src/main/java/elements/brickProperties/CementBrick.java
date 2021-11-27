@@ -4,6 +4,12 @@ import java.awt.*;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Point2D;
 
+/**
+ * This class specifies the properties of the brown cement brick seen in the gameplay
+ *
+ * Refactored by:
+ * @author LooXuenYi
+ */
 public class CementBrick extends Brick {
 
 
@@ -15,7 +21,12 @@ public class CementBrick extends Brick {
     private Crack crack;
     private Shape brickFace;
 
-
+    /**
+     * This constructor adds the point of the brick (location) and dimensions to the brick constructor specified in the abstract class "Brick"
+     *
+     * @param point
+     * @param size
+     */
     public CementBrick(Point point, Dimension size){
         super(NAME,point,size,DEF_BORDER,DEF_INNER,CEMENT_STRENGTH);
         crack = new Crack(DEF_CRACK_DEPTH,DEF_STEPS);
@@ -27,6 +38,13 @@ public class CementBrick extends Brick {
         return new Rectangle(pos,size);
     }
 
+    /**
+     * This method checks if it is broken or just make a crack everytime it is impacted
+     *
+     * @param point
+     * @param dir
+     * @return
+     */
     @Override
     public boolean setImpact(Point2D point, int dir) {
         if(super.isBroken())
@@ -40,12 +58,19 @@ public class CementBrick extends Brick {
         return true;
     }
 
-
+    /**
+     * This method shows how the brick looks like
+     *
+     * @return
+     */
     @Override
     public Shape getBrick() {
         return brickFace;
     }
 
+    /**
+     * THis method draws a crack on the brick when there is an impact made
+     */
     private void updateBrick(){
         if(!super.isBroken()){
             GeneralPath gp = crack.draw();
@@ -54,6 +79,9 @@ public class CementBrick extends Brick {
         }
     }
 
+    /**
+     * This method restores the number of time needed to impact the brick to the maximum
+     */
     public void repair(){
         super.repair();
         crack.reset();

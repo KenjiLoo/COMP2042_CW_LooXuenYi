@@ -19,23 +19,33 @@ package com.mainGameRunner;
 
 import elements.ballProperties.Ball;
 import elements.wallProperties.Wall;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
+/**
+ * This method runs the Debug Console by pressing on 'Ctrl'+'alt'+'F1"
+ *
+ * Refactored by:
+ * @author LooXuenYi
+ */
 public class DebugConsole extends JDialog implements WindowListener{
 
     private static final String TITLE = "Debug Console";
-
 
     private JFrame owner;
     private DebugPanel debugPanel;
     private GameBoard gameBoard;
     private Wall wall;
 
-
+    /**
+     * This is a constructor that runs the debug console when called
+     *
+     * @param owner
+     * @param wall
+     * @param gameBoard
+     */
     public DebugConsole(JFrame owner,Wall wall,GameBoard gameBoard){
 
         this.wall = wall;
@@ -50,6 +60,9 @@ public class DebugConsole extends JDialog implements WindowListener{
         this.pack();
     }
 
+    /**
+     * This method includes the functional components of the debug console
+     */
     private void initialize(){
         this.setModal(true);
         this.setTitle(TITLE);
@@ -59,39 +72,69 @@ public class DebugConsole extends JDialog implements WindowListener{
         this.setFocusable(true);
     }
 
-
+    /**
+     * This method sets the default position where the debug console should appear
+     */
     private void setLocation(){
         int x = ((owner.getWidth() - this.getWidth()) / 2) + owner.getX();
         int y = ((owner.getHeight() - this.getHeight()) / 2) + owner.getY();
         this.setLocation(x,y);
     }
 
-
+    /**
+     * This method checks if the debug console window is opened
+     *
+     * @param windowEvent
+     */
     @Override
     public void windowOpened(WindowEvent windowEvent) {
 
     }
 
+    /**
+     * This method checks if the debug console is closing
+     *
+     * @param windowEvent
+     */
     @Override
     public void windowClosing(WindowEvent windowEvent) {
         gameBoard.repaint();
     }
 
+    /**
+     * This method checks if the debug console is closing
+     *
+     * @param windowEvent
+     */
     @Override
     public void windowClosed(WindowEvent windowEvent) {
 
     }
 
+    /**
+     * This method deals with animations and stop its animation thread and free any large buffers in the debug console
+     *
+     * @param windowEvent
+     */
     @Override
     public void windowIconified(WindowEvent windowEvent) {
 
     }
 
+    /**
+     * This method can start the thread again and recreate the buffers in the debug console
+     * @param windowEvent
+     */
     @Override
     public void windowDeiconified(WindowEvent windowEvent) {
 
     }
 
+    /**
+     * This method allows the rendering of the game after changes made in the debug console, and to become an active window
+     *
+     * @param windowEvent
+     */
     @Override
     public void windowActivated(WindowEvent windowEvent) {
         setLocation();
@@ -99,8 +142,13 @@ public class DebugConsole extends JDialog implements WindowListener{
         debugPanel.setValues(b.getSpeedX(),b.getSpeedY());
     }
 
+    /**
+     * This method allows the debug console to debug console to become a background window
+     * @param windowEvent
+     */
     @Override
     public void windowDeactivated(WindowEvent windowEvent) {
 
     }
+
 }

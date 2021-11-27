@@ -21,7 +21,12 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;
 
-
+/**
+ * This class specifies the properties of the steel brick seen in the gameplay
+ *
+ * Refactored by:
+ * @author LooXuenYi
+ */
 public class SteelBrick extends Brick {
 
     private static final String NAME = "Steel Brick";
@@ -45,11 +50,23 @@ public class SteelBrick extends Brick {
         return new Rectangle(pos,size);
     }
 
+    /**
+     * This method is used to get the steel brick's appearance
+     *
+     * @return
+     */
     @Override
     public Shape getBrick() {
         return brickFace;
     }
 
+    /**
+     * This method checks if the steel brick is broken or have cracks whenever there is an impact on the brick
+     *
+     * @param point
+     * @param dir
+     * @return
+     */
     public  boolean setImpact(Point2D point , int dir){
         if(super.isBroken())
             return false;
@@ -57,6 +74,10 @@ public class SteelBrick extends Brick {
         return  super.isBroken();
     }
 
+    /**
+     * This method sets the instructions on how the steel brick breaks, which is based on chance.
+     * It generates a random number, and if it's less than the STEEL_PROBABILITY, it breaks
+     */
     public void impact(){
         if(rnd.nextDouble() < STEEL_PROBABILITY){
             super.impact();
