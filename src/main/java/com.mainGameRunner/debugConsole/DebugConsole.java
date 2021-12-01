@@ -1,3 +1,5 @@
+package com.mainGameRunner.debugConsole;
+
 /*
  *  Brick Destroy - A simple Arcade video game
  *   Copyright (C) 2017  Filippo Ranza
@@ -15,8 +17,9 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.mainGameRunner;
 
+import com.mainGameRunner.debugConsole.DebugPanel;
+import com.mainGameRunner.gameBoard.*;
 import elements.ballProperties.Ball;
 import elements.wallProperties.Wall;
 import javax.swing.*;
@@ -68,7 +71,7 @@ public class DebugConsole extends JDialog implements WindowListener{
         this.setTitle(TITLE);
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         this.setLayout(new BorderLayout());
-        this.addWindowListener(this);
+        this.addWindowListener((WindowListener) this);
         this.setFocusable(true);
     }
 

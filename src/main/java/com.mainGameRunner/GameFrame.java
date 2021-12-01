@@ -17,6 +17,8 @@
  */
 package com.mainGameRunner;
 
+import com.mainGameRunner.debugConsole.*;
+import com.mainGameRunner.gameBoard.*;
 import elements.homeMenu.HomeMenu;
 import javax.swing.*;
 import java.awt.*;

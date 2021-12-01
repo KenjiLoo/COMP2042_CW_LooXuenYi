@@ -1,3 +1,5 @@
+package com.mainGameRunner.gameBoard;
+
 /*
  *  Brick Destroy - A simple Arcade video game
  *   Copyright (C) 2017  Filippo Ranza
@@ -15,8 +17,7 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.mainGameRunner;
-
+import com.mainGameRunner.debugConsole.*;
 import elements.ballProperties.Ball;
 import elements.brickProperties.Brick;
 import elements.playerProperties.Player;
@@ -446,7 +447,7 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
 
     /**
      * This method senses the movements of the pointer
-     *
+     *d
      * @param mouseEvent
      */
     @Override

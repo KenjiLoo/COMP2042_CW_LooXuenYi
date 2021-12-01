@@ -1,3 +1,5 @@
+package com.mainGameRunner.debugConsole;
+
 /*
  *  Brick Destroy - A simple Arcade video game
  *   Copyright (C) 2017  Filippo Ranza
@@ -15,10 +17,10 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.mainGameRunner;
 
 import elements.wallProperties.Wall;
-
+import com.mainGameRunner.debugConsole.DebugPanel;
+import com.mainGameRunner.gameBoard.*;
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
@@ -116,5 +118,5 @@ public class DebugPanel extends JPanel {
         ballYSpeed.setValue(y);
     }
 
-    
+
 }
