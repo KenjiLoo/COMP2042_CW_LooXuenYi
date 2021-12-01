@@ -19,8 +19,7 @@ package com.mainGameRunner.debugConsole;
  */
 
 import elements.wallProperties.Wall;
-import com.mainGameRunner.debugConsole.DebugPanel;
-import com.mainGameRunner.gameBoard.*;
+
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
@@ -32,7 +31,7 @@ import java.awt.event.ActionListener;
  * Refactored by:
  * @author LooXuenYi
  */
-public class DebugPanel extends JPanel {
+public class RenderDebugConsole extends JPanel {
 
     private static final Color DEF_BKG = Color.WHITE;
 
@@ -49,7 +48,7 @@ public class DebugPanel extends JPanel {
      *
      * @param wall
      */
-    public DebugPanel(Wall wall){
+    public RenderDebugConsole(Wall wall){
 
         this.wall = wall;
 

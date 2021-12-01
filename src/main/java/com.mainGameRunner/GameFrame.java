@@ -96,7 +96,7 @@ public class GameFrame extends JFrame implements WindowFocusListener {
     }
 
     /**
-     * This method lets the game window the be focused
+     * This method lets the game window the to be focused
      * @param windowEvent
      */
     @Override

@@ -374,4 +374,10 @@ public class HomeMenu extends JComponent implements MouseListener, MouseMotionLi
             this.setCursor(Cursor.getDefaultCursor());
 
     }
+
+//    public void setDrawImage(boolean drawImage)
+//    {
+//        this.drawImage = drawImage;
+//        repaint();
+//    }
 }

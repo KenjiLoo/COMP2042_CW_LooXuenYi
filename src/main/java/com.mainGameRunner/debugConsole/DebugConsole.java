@@ -18,10 +18,10 @@ package com.mainGameRunner.debugConsole;
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import com.mainGameRunner.debugConsole.DebugPanel;
-import com.mainGameRunner.gameBoard.*;
+import com.mainGameRunner.gameBoard.GameBoard;
 import elements.ballProperties.Ball;
 import elements.wallProperties.Wall;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
@@ -29,18 +29,19 @@ import java.awt.event.WindowListener;
 
 /**
  * This method runs the Debug Console by pressing on 'Ctrl'+'alt'+'F1"
- *
+ * <p>
  * Refactored by:
+ *
  * @author LooXuenYi
  */
-public class DebugConsole extends JDialog implements WindowListener{
+public class DebugConsole extends JDialog implements WindowListener {
 
     private static final String TITLE = "Debug Console";
 
-    private JFrame owner;
-    private DebugPanel debugPanel;
-    private GameBoard gameBoard;
-    private Wall wall;
+    private final JFrame owner;
+    private final RenderDebugConsole debugPanel;
+    private final GameBoard gameBoard;
+    private final Wall wall;
 
     /**
      * This is a constructor that runs the debug console when called
@@ -49,15 +50,15 @@ public class DebugConsole extends JDialog implements WindowListener{
      * @param wall
      * @param gameBoard
      */
-    public DebugConsole(JFrame owner,Wall wall,GameBoard gameBoard){
+    public DebugConsole(JFrame owner, Wall wall, GameBoard gameBoard) {
 
         this.wall = wall;
         this.owner = owner;
         this.gameBoard = gameBoard;
         initialize();
 
-        debugPanel = new DebugPanel(wall);
-        this.add(debugPanel,BorderLayout.CENTER);
+        debugPanel = new RenderDebugConsole(wall);
+        this.add(debugPanel, BorderLayout.CENTER);
 
 
         this.pack();
@@ -66,22 +67,22 @@ public class DebugConsole extends JDialog implements WindowListener{
     /**
      * This method includes the functional components of the debug console
      */
-    private void initialize(){
+    private void initialize() {
         this.setModal(true);
         this.setTitle(TITLE);
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
         this.setLayout(new BorderLayout());
-        this.addWindowListener((WindowListener) this);
+        this.addWindowListener(this);
         this.setFocusable(true);
     }
 
     /**
      * This method sets the default position where the debug console should appear
      */
-    private void setLocation(){
+    private void setLocation() {
         int x = ((owner.getWidth() - this.getWidth()) / 2) + owner.getX();
         int y = ((owner.getHeight() - this.getHeight()) / 2) + owner.getY();
-        this.setLocation(x,y);
+        this.setLocation(x, y);
     }
 
     /**
@@ -126,6 +127,7 @@ public class DebugConsole extends JDialog implements WindowListener{
 
     /**
      * This method can start the thread again and recreate the buffers in the debug console
+     *
      * @param windowEvent
      */
     @Override
@@ -142,11 +144,12 @@ public class DebugConsole extends JDialog implements WindowListener{
     public void windowActivated(WindowEvent windowEvent) {
         setLocation();
         Ball b = wall.ball;
-        debugPanel.setValues(b.getSpeedX(),b.getSpeedY());
+        debugPanel.setValues(b.getSpeedX(), b.getSpeedY());
     }
 
     /**
      * This method allows the debug console to debug console to become a background window
+     *
      * @param windowEvent
      */
     @Override

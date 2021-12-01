@@ -28,8 +28,8 @@ import java.awt.event.*;
 import java.awt.font.FontRenderContext;
 
 /**
- * This class specifies the main flow and instructions needed to use the software
- * This class renders the animations and display of the componenets in the software
+ * This class specifies the main flow and instructions needed in the game
+ * This class renders the animations and display of the components in the gameplay
  *
  * Refactored by:
  * @author LooXuenYi
@@ -140,7 +140,7 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
 
         clear(g2d);
 
-        g2d.setColor(Color.BLUE);
+        g2d.setColor(Color.BLACK);
         g2d.drawString(message,250,225);
 
         drawBall(wall.ball,g2d);
@@ -228,7 +228,7 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
     }
 
     /**
-     * This method renders the menu's components when the software starts
+     * This method renders the menu's components
      *
      * @param g2d
      */
@@ -472,6 +472,10 @@ public class GameBoard extends JComponent implements KeyListener,MouseListener,M
         gameTimer.stop();
         message = "Focus Lost";
         repaint();
+    }
+
+    public void displayBrickImage(Graphics g2d){
+
     }
 
 }
