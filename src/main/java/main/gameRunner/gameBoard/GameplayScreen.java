@@ -46,7 +46,7 @@ public class GameplayScreen extends JComponent implements KeyListener,MouseListe
     private static final Color MENU_COLOR = new Color(0,255,0);
     private static final int DEF_WIDTH = 600;
     private static final int DEF_HEIGHT = 450;
-    private static final Color BG_COLOR = Color.WHITE;
+    private static final Color BG_COLOR = new Color(255,239,150);
     private Timer gameTimer;
     private Wall wall;
     private String message;
