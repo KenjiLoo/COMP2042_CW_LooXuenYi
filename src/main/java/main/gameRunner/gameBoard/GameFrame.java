@@ -1,4 +1,4 @@
-package main.gameRunner;
+package main.gameRunner.gameBoard;
 
 /*
  *  Brick Destroy - A simple Arcade video game
@@ -27,7 +27,7 @@ import java.awt.event.WindowFocusListener;
 import java.io.IOException;
 
 /**
- * This class specifies the layout of the GUI
+ * This class specifies the layout of the Game GUI
  *
  * Refactored by:
  * @author LooXuenYi

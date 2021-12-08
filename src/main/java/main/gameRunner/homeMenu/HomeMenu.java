@@ -18,8 +18,8 @@ package main.gameRunner.homeMenu;
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import main.gameRunner.GameFrame;
-
+import main.gameRunner.gameBoard.GameFrame;
+import main.gameRunner.instructionPage.InstructionPage;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -61,6 +61,7 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
     private Font creditsFont;
     private Font buttonFont;
     private GameFrame owner;
+    private InstructionPage instruction;
     private boolean startClicked;
     private boolean menuClicked;
     private boolean instructionClicked;
@@ -273,8 +274,8 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
         //instruction button placement
         instructionButton.setLocation(x,y);
 
-        x = (int)(instructionButton.getWidth() - mTxtRect.getWidth()) / 2;
-        y = (int)(instructionButton.getHeight() - mTxtRect.getHeight()) / 2;
+        x = (int)(instructionButton.getWidth() - iTxtRect.getWidth()) / 2;
+        y = (int)(instructionButton.getHeight() - iTxtRect.getHeight()) / 2;
 
         x += instructionButton.x;
         y += instructionButton.y + (startButton.height * 0.9);
@@ -306,11 +307,13 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
         Point p = mouseEvent.getPoint();
         if(startButton.contains(p)){
            owner.enableGameBoard();
-
         }
         else if(exitButton.contains(p)){
             System.out.println("Goodbye " + System.getProperty("user.name"));
             System.exit(0);
+        }
+        else if(instructionButton.contains(p)){
+
         }
 
     }
