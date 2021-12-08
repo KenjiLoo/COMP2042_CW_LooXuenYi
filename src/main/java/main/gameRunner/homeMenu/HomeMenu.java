@@ -41,7 +41,7 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
     private static final String CREDITS = "Version 0.1.1";
     private static final String START_TEXT = "Start";
     private static final String EXIT_TEXT = "Exit";
-    private static final String INSTRUCTION_TEXT = "Control";
+    private static final String INSTRUCTION_TEXT = "Info";
     private static final Color BG_COLOR = Color.GREEN.darker();
     private static final Color BORDER_COLOR = new Color(200,8,21); //Venetian Red
     private static final Color DASH_BORDER_COLOR = new  Color(255, 216, 0);//school bus yellow
@@ -268,11 +268,13 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
             g2d.drawString(EXIT_TEXT,x,y);
         }
 
+        y *= 0.6;
+
         //instruction button placement
         instructionButton.setLocation(x,y);
 
-        x = (int)(instructionButton.getWidth() - iTxtRect.getWidth()) / 2;
-        y = (int)(instructionButton.getHeight() - iTxtRect.getHeight()) / 2;
+        x = (int)(instructionButton.getWidth() - mTxtRect.getWidth()) / 2;
+        y = (int)(instructionButton.getHeight() - mTxtRect.getHeight()) / 2;
 
         x += instructionButton.x;
         y += instructionButton.y + (startButton.height * 0.9);
@@ -290,6 +292,7 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
             g2d.draw(instructionButton);
             g2d.drawString(INSTRUCTION_TEXT,x,y);
         }
+
     }
 
     /**
@@ -309,9 +312,7 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
             System.out.println("Goodbye " + System.getProperty("user.name"));
             System.exit(0);
         }
-        else if(instructionButton.contains(p)){
-            
-        }
+
     }
 
     /**
