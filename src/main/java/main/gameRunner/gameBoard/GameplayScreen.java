@@ -57,6 +57,7 @@ public class GameplayScreen extends JComponent implements KeyListener,MouseListe
     private Rectangle restartButtonRect;
     private int strLen;
     private DebugConsole debugConsole;
+    private String currentScore;
 
     /**
      * This method specifies the game logic
@@ -76,6 +77,8 @@ public class GameplayScreen extends JComponent implements KeyListener,MouseListe
         message = "";
         wall = new Wall(new Rectangle(0,0,DEF_WIDTH,DEF_HEIGHT),30,3,6/2,new Point(300,430));
 
+        currentScore = "";
+
         debugConsole = new DebugConsole(owner,wall,this);
         //initialize the first level
         wall.nextLevel();
@@ -83,6 +86,7 @@ public class GameplayScreen extends JComponent implements KeyListener,MouseListe
         gameTimer = new Timer(10,e ->{
             wall.move();
             wall.findImpacts();
+            currentScore = String.format("Score : %d", wall.getCurrentScore());
             message = String.format("Bricks: %d Balls %d",wall.getBrickCount(),wall.getBallCount());
             if(wall.isBallLost()){
                 if(wall.ballEnd()){
@@ -136,7 +140,7 @@ public class GameplayScreen extends JComponent implements KeyListener,MouseListe
 
         g2d.setColor(Color.BLACK);
         g2d.drawString(message,250,225);
-
+        g2d.drawString(currentScore, 250,250);
         drawBall(wall.ball,g2d);
 
         for(Brick b : wall.bricks)

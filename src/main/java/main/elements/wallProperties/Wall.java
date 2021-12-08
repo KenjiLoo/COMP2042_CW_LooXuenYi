@@ -54,6 +54,7 @@ public class Wall {
     private int brickCount;
     private int ballCount;
     private boolean ballLost;
+    private int currentScore;
 
     /**
      * This constructor includes all necessary properties of the wall to be called when used
@@ -250,6 +251,7 @@ public class Wall {
             * because for every brick program checks for horizontal and vertical impacts
             */
             brickCount--;
+            currentScore += 1 ;
         }
         else if(impactBorder()) {
             ball.reverseX();
@@ -289,6 +291,8 @@ public class Wall {
         }
         return false;
     }
+
+    public int getCurrentScore() { return currentScore; }
 
     /**
      * This method allows the ball to make a bounce whenever it hits the sides of the wall
