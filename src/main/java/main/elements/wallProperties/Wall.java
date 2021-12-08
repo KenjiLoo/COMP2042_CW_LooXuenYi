@@ -292,6 +292,11 @@ public class Wall {
         return false;
     }
 
+    /**
+     * This method returns the current score into the GameplayScreen
+     *
+     * @return currentScore
+     */
     public int getCurrentScore() { return currentScore; }
 
     /**

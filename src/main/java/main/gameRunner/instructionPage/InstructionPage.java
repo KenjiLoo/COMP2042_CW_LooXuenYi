@@ -8,7 +8,12 @@ import java.awt.event.MouseMotionListener;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
 
-
+/**
+ * This class defines the properties in the instruction page
+ *
+ * Refactored by:
+ * @author LooXuenYi
+ */
 public class InstructionPage extends InstructionImage implements MouseListener, MouseMotionListener {
 
     // Variables Declaration

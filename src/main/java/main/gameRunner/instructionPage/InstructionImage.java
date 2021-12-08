@@ -6,6 +6,12 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
+/**
+ * This abstract class allows the instruction page to display an image
+ *
+ * Refactored by:
+ * @author LooXuenYi
+ */
 abstract public class InstructionImage extends JComponent {
     // Variables Declaration
     private BufferedImage img;
@@ -13,8 +19,6 @@ abstract public class InstructionImage extends JComponent {
 
     /**
      * This constructor sets the size of the image display, allows it to be focusable, and checks if there is a valid picture to display
-     *
-     * @throws IOException
      */
     public InstructionImage()
     {
@@ -31,6 +35,11 @@ abstract public class InstructionImage extends JComponent {
 
     }
 
+    /**
+     * This method allows the img to be passed into the constructor
+     *
+     * @return img
+     */
     public BufferedImage img() { return img; }
 
 

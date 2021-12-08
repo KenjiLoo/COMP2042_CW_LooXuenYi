@@ -21,7 +21,7 @@ abstract public class Image extends JComponent {
     /**
      * This constructor sets the size of the image display, allows it to be focusable, and checks if there is a valid picture to display
      *
-     * @throws IOException
+     *
      */
     public Image()
     {
