@@ -93,10 +93,10 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
         borderStoke = new BasicStroke(BORDER_SIZE,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND,0,DASHES,0);
         borderStoke_noDashes = new BasicStroke(BORDER_SIZE,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND);
 
-        greetingsFont = new Font("Noto Mono",Font.PLAIN,25);
-        gameTitleFont = new Font("Noto Mono",Font.BOLD,40);
-        creditsFont = new Font("Monospaced",Font.PLAIN,10);
-        buttonFont = new Font("Monospaced",Font.PLAIN,startButton.height-2);
+        greetingsFont = new Font("name",Font.PLAIN,25);
+        gameTitleFont = new Font("name",Font.BOLD,40);
+        creditsFont = new Font("name",Font.PLAIN,10);
+        buttonFont = new Font("name",Font.PLAIN,startButton.height-2);
     }
 
     /**
