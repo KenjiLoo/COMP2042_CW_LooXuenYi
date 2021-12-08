@@ -216,10 +216,10 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
 
         g2d.setFont(buttonFont);
 
-        int x = (menuFace.width - startButton.width) / 2;
-        int y =(int) ((menuFace.height - startButton.height) * 0.8);
-
         //Start Button Placement
+        int x = (menuFace.width - startButton.width) / 2;
+        int y =(int) ((menuFace.height - startButton.height) * 0.6);
+
         startButton.setLocation(x,y);
 
         x = (int)(startButton.getWidth() - txtRect.getWidth()) / 2;
@@ -246,6 +246,31 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
 
         y *= 1.2;
 
+        //instruction button placement
+        instructionButton.setLocation(x,y);
+
+        x = (int)(instructionButton.getWidth() - iTxtRect.getWidth()) / 2;
+        y = (int)(instructionButton.getHeight() - iTxtRect.getHeight()) / 2;
+
+        x += instructionButton.x;
+        y += instructionButton.y + (startButton.height * 0.9);
+
+        if(instructionClicked){
+            Color tmp = g2d.getColor();
+
+            g2d.setColor(CLICKED_BUTTON_COLOR);
+            g2d.draw(instructionButton);
+            g2d.setColor(CLICKED_TEXT);
+            g2d.drawString(INSTRUCTION_TEXT,x,y);
+            g2d.setColor(tmp);
+        }
+        else{
+            g2d.draw(instructionButton);
+            g2d.drawString(INSTRUCTION_TEXT,x,y);
+        }
+
+        y *= 1.2;
+
         //exit button placement
         exitButton.setLocation(x,y);
 
@@ -269,30 +294,9 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
             g2d.drawString(EXIT_TEXT,x,y);
         }
 
-        y *= 0.6;
 
-        //instruction button placement
-        instructionButton.setLocation(x,y);
 
-        x = (int)(instructionButton.getWidth() - iTxtRect.getWidth()) / 2;
-        y = (int)(instructionButton.getHeight() - iTxtRect.getHeight()) / 2;
 
-        x += instructionButton.x;
-        y += instructionButton.y + (startButton.height * 0.9);
-
-        if(instructionClicked){
-            Color tmp = g2d.getColor();
-
-            g2d.setColor(CLICKED_BUTTON_COLOR);
-            g2d.draw(instructionButton);
-            g2d.setColor(CLICKED_TEXT);
-            g2d.drawString(INSTRUCTION_TEXT,x,y);
-            g2d.setColor(tmp);
-        }
-        else{
-            g2d.draw(instructionButton);
-            g2d.drawString(INSTRUCTION_TEXT,x,y);
-        }
 
     }
 
