@@ -25,6 +25,7 @@ import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import java.io.IOException;
+import main.gameRunner.instructionPage.InstructionPage;
 
 /**
  * This class specifies the layout of the Game GUI
@@ -38,6 +39,7 @@ public class GameFrame extends JFrame implements WindowFocusListener {
     private static final String DEF_TITLE = "Brick Destroy";
     private GameplayScreen gameBoard;
     private HomeMenu homeMenu;
+    private InstructionPage instructionPage;
     private boolean gaming;
 
     /**
@@ -49,12 +51,14 @@ public class GameFrame extends JFrame implements WindowFocusListener {
         this.setLayout(new BorderLayout());
         gameBoard = new GameplayScreen(this);
         homeMenu = new HomeMenu(this,new Dimension(511,511));
+
         this.add(homeMenu,BorderLayout.CENTER);
+
         this.setUndecorated(true);
     }
 
     /**
-     * This method defines the basic manner of how the game frame should behave
+     * This method allows the program to load the home menu when started
      */
     public void initialize(){
         this.setTitle(DEF_TITLE);
@@ -70,7 +74,28 @@ public class GameFrame extends JFrame implements WindowFocusListener {
     public void enableGameBoard(){
         this.dispose();
         this.remove(homeMenu);
-        this.add(gameBoard,BorderLayout.CENTER);
+        this.add(gameBoard, BorderLayout.CENTER);
+        this.setUndecorated(false);
+        initialize();
+        /*to avoid problems with graphics focus controller is added here*/
+        this.addWindowFocusListener(this);
+    }
+
+    public void enableInstructionPage(){
+        this.dispose();
+        this.remove(homeMenu);
+        instructionPage = new InstructionPage(this,new Dimension(511,511));
+        this.add(instructionPage,BorderLayout.CENTER);
+        this.setUndecorated(false);
+        initialize();
+        /*to avoid problems with graphics focus controller is added here*/
+        this.addWindowFocusListener(this);
+    }
+
+    public void enableHomeMenu(){
+        this.dispose();
+        this.remove(instructionPage);
+        this.add(homeMenu,BorderLayout.CENTER);
         this.setUndecorated(false);
         initialize();
         /*to avoid problems with graphics focus controller is added here*/

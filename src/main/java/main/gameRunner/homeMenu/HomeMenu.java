@@ -313,7 +313,7 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
             System.exit(0);
         }
         else if(instructionButton.contains(p)){
-
+            owner.enableInstructionPage();
         }
 
     }
@@ -336,6 +336,10 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
             menuClicked = true;
             repaint(exitButton.x, exitButton.y, exitButton.width+1, exitButton.height+1);
         }
+        else if(instructionButton.contains(p)){
+            instructionClicked = true;
+            repaint(instructionButton.x, instructionButton.y, instructionButton.width+1, instructionButton.height+1);
+        }
     }
 
     /**
@@ -346,13 +350,17 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
     @Override
     public void mouseReleased(MouseEvent mouseEvent)
     {
-        if(startClicked ){
+        if(startClicked){
             startClicked = false;
             repaint(startButton.x,startButton.y,startButton.width+1,startButton.height+1);
         }
         else if(menuClicked){
             menuClicked = false;
             repaint(exitButton.x, exitButton.y, exitButton.width+1, exitButton.height+1);
+        }
+        else if(instructionClicked){
+            instructionClicked = false;
+            repaint(instructionButton.x, instructionButton.y, instructionButton.width+1, instructionButton.height+1);
         }
     }
 
@@ -388,7 +396,7 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
     public void mouseMoved(MouseEvent mouseEvent)
     {
         Point p = mouseEvent.getPoint();
-        if(startButton.contains(p) || exitButton.contains(p))
+        if(startButton.contains(p) || exitButton.contains(p) || instructionButton.contains(p))
             this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         else
             this.setCursor(Cursor.getDefaultCursor());

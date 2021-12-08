@@ -31,7 +31,7 @@ abstract public class Image extends JComponent {
 
         try {
             img = ImageIO.read(getClass().getResourceAsStream("bricks.jpg"));
-            System.out.printf("print");
+            System.out.printf("Home Menu Image Worked");
         } catch (IOException e){
             e.printStackTrace();
         }

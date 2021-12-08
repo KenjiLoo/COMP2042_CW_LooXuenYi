@@ -173,6 +173,8 @@ public class BrickCrack {
                 pos = rnd.nextInt(to.y - from.y) + from.y;
                 out.setLocation(to.x,pos);
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: There is an error in cracking" + direction);
         }
 
         return out;

@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class InstructionImage extends JComponent {
+abstract public class InstructionImage extends JComponent {
     // Variables Declaration
     private BufferedImage img;
     private static final Dimension IMAGE_SIZE = new Dimension(511, 511);
