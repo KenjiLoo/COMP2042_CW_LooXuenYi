@@ -1,4 +1,4 @@
-package main.gameRunner.gameBoard;
+package main.gameRunner;
 
 /*
  *  Brick Destroy - A simple Arcade video game

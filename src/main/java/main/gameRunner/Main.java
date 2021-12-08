@@ -18,8 +18,6 @@ package main.gameRunner;
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import main.gameRunner.gameBoard.GameFrame;
-
 import java.awt.*;
 import java.io.IOException;
 

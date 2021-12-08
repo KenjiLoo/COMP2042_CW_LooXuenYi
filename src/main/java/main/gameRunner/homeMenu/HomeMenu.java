@@ -18,7 +18,7 @@ package main.gameRunner.homeMenu;
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import main.gameRunner.gameBoard.GameFrame;
+import main.gameRunner.GameFrame;
 import main.gameRunner.instructionPage.InstructionPage;
 import java.awt.*;
 import java.awt.event.MouseEvent;
