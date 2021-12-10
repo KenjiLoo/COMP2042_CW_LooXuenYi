@@ -26,7 +26,7 @@ public class BrickCrack {
     private GeneralPath crack;
     private int crackDepth;
     private int steps;
-    final Brick outer;
+    private final Shape brickFace;
 
     /**
      * This constructor defines the behavior of the cracks
@@ -34,12 +34,12 @@ public class BrickCrack {
      * @param crackDepth
      * @param steps
      */
-    public BrickCrack(int crackDepth, int steps, Brick outer)
+    public BrickCrack(int crackDepth, int steps, Shape brickFace)
     {
         crack = new GeneralPath();
         this.crackDepth = crackDepth;
         this.steps = steps;
-        this.outer = outer;
+        this.brickFace = brickFace;
     }
 
     /**
@@ -67,7 +67,8 @@ public class BrickCrack {
      */
     protected void makeCrack(Point2D point, int direction)
     {
-        Rectangle bounds = outer.brickFace.getBounds();
+        assert false;
+        Rectangle bounds = brickFace.getBounds();
         Point impact = new Point((int)point.getX(),(int)point.getY());
         Point start = new Point();
         Point end = new Point();
@@ -76,16 +77,14 @@ public class BrickCrack {
             case LEFT:
                 start.setLocation(bounds.x + bounds.width, bounds.y);
                 end.setLocation(bounds.x + bounds.width, bounds.y + bounds.height);
-                Point tmp = makeRandomPoint(start,end,VERTICAL);
-                makeCrack(impact,tmp);
-
+                Point tmp = makeRandomPoint(start, end, VERTICAL);
+                makeCrack(impact, tmp);
                 break;
             case RIGHT:
                 start.setLocation(bounds.getLocation());
                 end.setLocation(bounds.x, bounds.y + bounds.height);
-                tmp = makeRandomPoint(start,end,VERTICAL);
-                makeCrack(impact,tmp);
-
+                tmp = makeRandomPoint(start, end, VERTICAL);
+                makeCrack(impact, tmp);
                 break;
             case UP:
                 start.setLocation(bounds.x, bounds.y + bounds.height);
@@ -109,7 +108,6 @@ public class BrickCrack {
      * @param end
      */
 
-    //this is a duplicate method
     protected void makeCrack(Point start, Point end)
     {
         GeneralPath path = new GeneralPath();
@@ -124,7 +122,7 @@ public class BrickCrack {
 
         double x,y;
 
-        for(int i = 1; i < steps;i++){
+        for(int i = 1; i < steps; i++){
             x = (i * w) + start.x;
             y = (i * h) + start.y + randomInBounds(bound);
 
@@ -141,7 +139,7 @@ public class BrickCrack {
     private int randomInBounds(int bound)
     {
         int n = (bound * 2) + 1;
-        return rnd.nextInt(n) - bound;
+        return Brick.getRnd().nextInt(n) - bound;
     }
 
     private boolean inMiddle(int i,int steps,int divisions)
@@ -154,7 +152,7 @@ public class BrickCrack {
 
     private int jumps(int bound,double probability)
     {
-        if(rnd.nextDouble() > probability)
+        if(Brick.getRnd().nextDouble() > BrickCrack.JUMP_PROBABILITY)
             return randomInBounds(bound);
         return  0;
     }
@@ -166,12 +164,11 @@ public class BrickCrack {
 
         switch(direction){
             case HORIZONTAL:
-                pos = rnd.nextInt(to.x - from.x) + from.x;
-                System.out.println(pos);
+                pos = Brick.getRnd().nextInt(to.x - from.x) + from.x;
                 out.setLocation(pos,to.y);
                 break;
             case VERTICAL:
-                pos = rnd.nextInt(to.y - from.y) + from.y;
+                pos = Brick.getRnd().nextInt(to.y - from.y) + from.y;
                 out.setLocation(to.x,pos);
                 break;
             default:

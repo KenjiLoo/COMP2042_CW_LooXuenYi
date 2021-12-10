@@ -140,6 +140,14 @@ abstract public class Brick  {
         broken = (strength == 0);
     }
 
+    public static Random getRnd() {
+        return rnd;
+    }
+
+    public Shape getBrickFace(){
+        return brickFace;
+    }
+
 }
 
 
