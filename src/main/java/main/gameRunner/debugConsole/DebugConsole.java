@@ -35,7 +35,7 @@ import java.awt.event.WindowListener;
  */
 public class DebugConsole extends JDialog implements WindowListener {
 
-    private static final String TITLE = "Debug Console";
+    private static final String TITLE = "Settings (Debug Console)";
 
     private final JFrame owner;
     private final RenderDebugConsole debugPanel;
