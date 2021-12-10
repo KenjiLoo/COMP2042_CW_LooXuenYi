@@ -20,6 +20,8 @@ package main.gameRunner;
 
 import java.awt.*;
 import java.io.IOException;
+import java.io.File;
+import javax.sound.sampled.*;
 
 /**
  * This class is the main class that executes the software
@@ -30,12 +32,11 @@ import java.io.IOException;
 public class Main {
 
     /**
-     * This method is the main method that runs the software
+     * This method is the main method that runs the software, and outputs the audio for the background music
      *
      * @param args
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         EventQueue.invokeLater(() -> {
             try {
                 new GameFrame().initialize();
@@ -43,6 +44,13 @@ public class Main {
                 e.printStackTrace();
             }
         });
+
+        //plays the audio
+        File file = new File("src/main/java/main/gameRunner/game_music.wav");
+        AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+        Clip clip = AudioSystem.getClip();
+        clip.open(audioStream);
+        clip.start();
     }
 
 }
