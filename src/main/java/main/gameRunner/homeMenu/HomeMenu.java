@@ -293,11 +293,6 @@ public class HomeMenu extends Image implements MouseListener, MouseMotionListene
             g2d.draw(exitButton);
             g2d.drawString(EXIT_TEXT,x,y);
         }
-
-
-
-
-
     }
 
     /**

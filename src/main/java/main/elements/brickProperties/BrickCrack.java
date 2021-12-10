@@ -167,6 +167,7 @@ public class BrickCrack {
         switch(direction){
             case HORIZONTAL:
                 pos = rnd.nextInt(to.x - from.x) + from.x;
+                System.out.println(pos);
                 out.setLocation(pos,to.y);
                 break;
             case VERTICAL:

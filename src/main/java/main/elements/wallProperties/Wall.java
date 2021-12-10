@@ -388,7 +388,7 @@ public class Wall {
      */
     public void nextLevel()
     {
-        if (level<3) {
+        if (level<4) {
             bricks = levels[level++];
         }
 
