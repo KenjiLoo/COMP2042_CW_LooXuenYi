@@ -52,7 +52,9 @@ public class Main {
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);
-        clip.start();
+        while(true) {
+            clip.start();
+        }
     }
 
 }
