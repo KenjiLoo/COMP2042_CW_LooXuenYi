@@ -59,19 +59,26 @@ public class GameFrame extends JFrame implements WindowFocusListener {
 
     /**
      * This method allows the program to load the home menu when started
+     *
+     * @return test
      */
-    public void initialize(){
+    public String initialize(){
+        String test = "Initialized";
         this.setTitle(DEF_TITLE);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.pack();
         this.autoLocate();
         this.setVisible(true);
+        return test;
     }
 
     /**
      * This method renders the game board
+     *
+     * @return test
      */
-    public void enableGameBoard(){
+    public String enableGameBoard(){
+        String test = "Initialized";
         this.dispose();
         this.remove(homeMenu);
         this.add(gameBoard, BorderLayout.CENTER);
@@ -79,12 +86,16 @@ public class GameFrame extends JFrame implements WindowFocusListener {
         initialize();
         /*to avoid problems with graphics focus controller is added here*/
         this.addWindowFocusListener(this);
+        return test;
     }
 
     /**
-     * This method is the controller method for the Intruction Page
+     * This method is the controller method for the Instruction Page
+     *
+     * @return test
      */
-    public void enableInstructionPage(){
+    public String enableInstructionPage(){
+        String test = "Initialized";
         this.dispose();
         this.remove(homeMenu);
         instructionPage = new InstructionPage(this,new Dimension(511,511));
@@ -93,12 +104,16 @@ public class GameFrame extends JFrame implements WindowFocusListener {
         initialize();
         /*to avoid problems with graphics focus controller is added here*/
         this.addWindowFocusListener(this);
+        return test;
     }
 
     /**
      * This method is the controller method for the Home menu
+     *
+     * @return test
      */
-    public void enableHomeMenu(){
+    public String enableHomeMenu(){
+        String test = "Initialized";
         this.dispose();
         this.remove(instructionPage);
         this.add(homeMenu,BorderLayout.CENTER);
@@ -106,6 +121,7 @@ public class GameFrame extends JFrame implements WindowFocusListener {
         initialize();
         /*to avoid problems with graphics focus controller is added here*/
         this.addWindowFocusListener(this);
+        return test;
     }
 
     /**

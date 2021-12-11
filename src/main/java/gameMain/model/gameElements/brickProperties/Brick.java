@@ -69,7 +69,7 @@ abstract public class Brick  {
         if(broken)
             return false;
         impact();
-        return  broken;
+        return broken;
     }
 
     /**

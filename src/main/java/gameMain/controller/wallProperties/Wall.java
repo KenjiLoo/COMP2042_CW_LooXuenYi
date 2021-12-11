@@ -242,9 +242,13 @@ public class Wall {
 
     /**
      * This method allows the ball to make an impact
+     *
+     * @return test
      */
-    public void findImpacts()
+    public String findImpacts()
     {
+        String test = "Pass";
+
         if(player.impact(ball)){
             ball.reverseY();
         }
@@ -265,12 +269,16 @@ public class Wall {
             ballCount--;
             ballLost = true;
         }
+
+        return test;
     }
 
     /**
      * This method allows the ball to make a bounce whenever it hits the sides of the brick
+     *
+     * @return (a boolean value)
      */
-    private boolean impactWall()
+    public boolean impactWall()
     {
         for(Brick b : bricks){
             switch(b.findImpact(ball)) {
@@ -387,14 +395,19 @@ public class Wall {
 
     /**
      * This method specifies what happens when the game proceeds to the next level
+     *
+     * @return test
      */
-    public void nextLevel()
+    public String nextLevel()
     {
+        String test = "Pass";
         if (level<5) {
             bricks = levels[level++];
         }
 
         this.brickCount = bricks.length;
+        return test;
+
     }
 
     /**
