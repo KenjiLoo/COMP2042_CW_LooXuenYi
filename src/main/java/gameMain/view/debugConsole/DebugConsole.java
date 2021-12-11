@@ -49,7 +49,8 @@ public class DebugConsole extends JDialog implements WindowListener {
      * @param wall
      * @param gameBoard
      */
-    public DebugConsole(JFrame owner, Wall wall, GameplayScreen gameBoard) {
+    public DebugConsole(JFrame owner, Wall wall, GameplayScreen gameBoard)
+    {
 
         this.wall = wall;
         this.owner = owner;
@@ -66,7 +67,8 @@ public class DebugConsole extends JDialog implements WindowListener {
     /**
      * This method includes the functional components of the debug console
      */
-    private void initialize() {
+    private void initialize()
+    {
         this.setModal(true);
         this.setTitle(TITLE);
         this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
@@ -78,7 +80,8 @@ public class DebugConsole extends JDialog implements WindowListener {
     /**
      * This method sets the default position where the debug console should appear
      */
-    private void setLocation() {
+    private void setLocation()
+    {
         int x = ((owner.getWidth() - this.getWidth()) / 2) + owner.getX();
         int y = ((owner.getHeight() - this.getHeight()) / 2) + owner.getY();
         this.setLocation(x, y);
@@ -90,9 +93,7 @@ public class DebugConsole extends JDialog implements WindowListener {
      * @param windowEvent
      */
     @Override
-    public void windowOpened(WindowEvent windowEvent) {
-
-    }
+    public void windowOpened(WindowEvent windowEvent) {}
 
     /**
      * This method checks if the debug console is closing
@@ -110,9 +111,7 @@ public class DebugConsole extends JDialog implements WindowListener {
      * @param windowEvent
      */
     @Override
-    public void windowClosed(WindowEvent windowEvent) {
-
-    }
+    public void windowClosed(WindowEvent windowEvent) {}
 
     /**
      * This method deals with animations and stop its animation thread and free any large buffers in the debug console
@@ -120,9 +119,7 @@ public class DebugConsole extends JDialog implements WindowListener {
      * @param windowEvent
      */
     @Override
-    public void windowIconified(WindowEvent windowEvent) {
-
-    }
+    public void windowIconified(WindowEvent windowEvent) {}
 
     /**
      * This method can start the thread again and recreate the buffers in the debug console
@@ -130,9 +127,7 @@ public class DebugConsole extends JDialog implements WindowListener {
      * @param windowEvent
      */
     @Override
-    public void windowDeiconified(WindowEvent windowEvent) {
-
-    }
+    public void windowDeiconified(WindowEvent windowEvent) {}
 
     /**
      * This method allows the rendering of the game after changes made in the debug console, and to become an active window
@@ -140,7 +135,8 @@ public class DebugConsole extends JDialog implements WindowListener {
      * @param windowEvent
      */
     @Override
-    public void windowActivated(WindowEvent windowEvent) {
+    public void windowActivated(WindowEvent windowEvent)
+    {
         setLocation();
         Ball b = wall.ball;
         debugPanel.setValues(b.getSpeedX(), b.getSpeedY());
@@ -152,8 +148,6 @@ public class DebugConsole extends JDialog implements WindowListener {
      * @param windowEvent
      */
     @Override
-    public void windowDeactivated(WindowEvent windowEvent) {
-
-    }
+    public void windowDeactivated(WindowEvent windowEvent) {}
 
 }

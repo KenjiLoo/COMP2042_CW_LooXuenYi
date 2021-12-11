@@ -49,6 +49,12 @@ abstract public class Brick  {
         this.fullStrength = this.strength = strength;
     }
 
+    /**
+     * This method passes the properties of the brick's display
+     *
+     * @param pos
+     * @param size
+     */
     protected abstract Shape makeBrickFace(Point pos,Dimension size);
 
     /**
@@ -140,10 +146,20 @@ abstract public class Brick  {
         broken = (strength == 0);
     }
 
+    /**
+     * This method get a random number
+     *
+     * @return rnd
+     */
     public static Random getRnd() {
         return rnd;
     }
 
+    /**
+     * This method returns the properties of the brick's display
+     *
+     * @return brickFace
+     */
     public Shape getBrickFace(){
         return brickFace;
     }

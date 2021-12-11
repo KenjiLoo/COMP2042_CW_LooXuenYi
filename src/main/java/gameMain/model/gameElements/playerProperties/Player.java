@@ -118,9 +118,7 @@ public class Player {
      *
      * @return playerFace
      */
-    public Shape getPlayerFace(){
-        return  playerFace;
-    }
+    public Shape getPlayerFace() { return playerFace; }
 
     /**
      * This method specifies what happens when the player moves, how it changes position

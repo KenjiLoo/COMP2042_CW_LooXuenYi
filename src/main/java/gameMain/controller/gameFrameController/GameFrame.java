@@ -81,6 +81,9 @@ public class GameFrame extends JFrame implements WindowFocusListener {
         this.addWindowFocusListener(this);
     }
 
+    /**
+     * This method is the controller method for the Intruction Page
+     */
     public void enableInstructionPage(){
         this.dispose();
         this.remove(homeMenu);
@@ -92,6 +95,9 @@ public class GameFrame extends JFrame implements WindowFocusListener {
         this.addWindowFocusListener(this);
     }
 
+    /**
+     * This method is the controller method for the Home menu
+     */
     public void enableHomeMenu(){
         this.dispose();
         this.remove(instructionPage);

@@ -107,7 +107,6 @@ public class BrickCrack {
      * @param start
      * @param end
      */
-
     protected void makeCrack(Point start, Point end)
     {
         GeneralPath path = new GeneralPath();
@@ -157,6 +156,14 @@ public class BrickCrack {
         return  0;
     }
 
+    /**
+     * This method allows cracks to be made, returning the location of the cracks
+     *
+     * @param from
+     * @param to
+     * @param direction
+     * @return out
+     */
     private Point makeRandomPoint(Point from,Point to, int direction)
     {
         Point out = new Point();
