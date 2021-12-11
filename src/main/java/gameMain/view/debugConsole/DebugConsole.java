@@ -20,7 +20,7 @@ package gameMain.view.debugConsole;
 
 import gameMain.view.gameBoard.GameplayScreen;
 import gameMain.model.gameElements.ballProperties.Ball;
-import gameMain.model.gameElements.wallProperties.Wall;
+import gameMain.controller.wallProperties.Wall;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;

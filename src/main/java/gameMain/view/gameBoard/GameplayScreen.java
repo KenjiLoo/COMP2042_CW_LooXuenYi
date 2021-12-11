@@ -21,7 +21,7 @@ package gameMain.view.gameBoard;
 import gameMain.model.gameElements.ballProperties.Ball;
 import gameMain.model.gameElements.brickProperties.Brick;
 import gameMain.model.gameElements.playerProperties.Player;
-import gameMain.model.gameElements.wallProperties.Wall;
+import gameMain.controller.wallProperties.Wall;
 import gameMain.view.debugConsole.DebugConsole;
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package gameMain.model.gameElements.wallProperties;
+package gameMain.controller.wallProperties;
 
 /*
  *  Brick Destroy - A simple Arcade video game

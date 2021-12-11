@@ -18,7 +18,7 @@ package gameMain.view.debugConsole;
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import gameMain.model.gameElements.wallProperties.Wall;
+import gameMain.controller.wallProperties.Wall;
 import javax.swing.*;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
