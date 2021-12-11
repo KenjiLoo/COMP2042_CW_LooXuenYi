@@ -467,7 +467,7 @@ public class GameplayScreen extends JComponent implements KeyListener,MouseListe
     public void onLostFocus()
     {
         gameTimer.stop();
-        message = "Focus Lost";
+        message = "Focus Lost, press SPACE";
         repaint();
     }
 
