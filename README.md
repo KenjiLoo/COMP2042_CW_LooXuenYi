@@ -39,9 +39,13 @@
 #PROJECT RELATED ADDITIONS
 1) Included Gradle as a build tool
 2) Included a Javadocs folder that contains the Javadocs files
+   - GO TO THE `JavaDocs` FOLDER, OPEN ANY `.html` FILE
 
 #REPOSITORY
 url: https://github.com/KenjiLoo/COMP2042_CW_hfyxl3/
+
+#JUNIT TESTS
+1) 
 
 #SUMMARY
 The main changes of the code to the original file is that it is a Gradle project, refactored into packages in an M-V-C style, implemented SOLID, and the additions which are background game audio, instruction page, a different background on home menu, an extra level, and a view score. 
