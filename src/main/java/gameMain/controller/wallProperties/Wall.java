@@ -26,7 +26,6 @@ import gameMain.model.gameElements.brickProperties.SteelBrick;
 import gameMain.model.gameElements.ballProperties.Ball;
 import gameMain.model.gameElements.brickProperties.BrickCrack;
 import gameMain.model.gameElements.playerProperties.Player;
-
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.util.Random;

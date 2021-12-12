@@ -61,11 +61,10 @@ public class BrickCrack {
 
     /**
      * This method specifies the rules on how the cracks should be created upon impact
-     *
-     * @param point
+     *  @param point
      * @param direction
      */
-    protected void makeCrack(Point2D point, int direction)
+    protected String makeCrack(Point2D point, int direction)
     {
         assert false;
         Rectangle bounds = brickFace.getBounds();
@@ -99,6 +98,7 @@ public class BrickCrack {
                 makeCrack(impact,tmp);
                 break;
         }
+        return null;
     }
 
     /**

@@ -45,9 +45,13 @@
 url: https://github.com/KenjiLoo/COMP2042_CW_hfyxl3/
 
 #JUNIT TESTS
-1) 
-
-#SUMMARY
-The main changes of the code to the original file is that it is a Gradle project, refactored into packages in an M-V-C style, implemented SOLID, and the additions which are background game audio, instruction page, a different background on home menu, an extra level, and a view score. 
-
- 
+The JUnit tests are built to test the if a method is able to run. Since Java compiles code sequentially, a variable is declared at the start of the chosen methods, and each method is set to return the test variable. If the method is able to return, the test passes.
+1) `GameFrameTest` to test methods in `GameFrame`: 
+   - `initailize()` because this method renders the home menu upon running. 
+   - `enableGameBoard` a controller method that redirects the game to the game screen. 
+   - `enableInstructionPage` a controller method that redirects the game to the instruction screen.
+   - `enableHomeMenu` a controller method that redirects the game to the home menu.
+2) `WallTest` to test methods in `Wall`:
+   - `findImpacts()` because it enables ball impacts to be made. 
+   - `nextLevel()` because it renders the next level.
+   
