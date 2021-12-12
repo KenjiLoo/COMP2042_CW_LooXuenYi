@@ -55,3 +55,12 @@ The JUnit tests are built to test the if a method is able to run. Since Java com
    - `findImpacts()` because it enables ball impacts to be made. 
    - `nextLevel()` because it renders the next level.
    
+#GIT USAGE
+![git3](https://user-images.githubusercontent.com/80972386/145713217-c9168b4b-3869-4e15-bd76-c9168e879894.GIF)
+![git2](https://user-images.githubusercontent.com/80972386/145713218-4616fccc-1a64-4e40-8c53-ca65006bab5b.GIF)
+![git1](https://user-images.githubusercontent.com/80972386/145713220-35b7ec99-a89d-4cd7-9461-634eb58ed83a.GIF)
+![git5](https://user-images.githubusercontent.com/80972386/145713222-9cdc3e28-41dc-4c0e-bf0c-51a00a7d7c40.GIF)
+![git4](https://user-images.githubusercontent.com/80972386/145713223-1568d962-6a2e-4a4e-bca4-29ccb7f3c473.GIF)
+
+
+   
