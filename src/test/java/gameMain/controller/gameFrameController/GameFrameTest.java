@@ -27,9 +27,4 @@ class GameFrameTest {
     void enableInstructionPage() {
         assertEquals("Initialized", game.enableInstructionPage());
     }
-
-    @Test
-    void enableHomeMenu() {
-        assertEquals("Initialized", game.enableHomeMenu());
-    }
 }
