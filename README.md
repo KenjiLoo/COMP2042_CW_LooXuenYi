@@ -1,6 +1,6 @@
-#COMP2042 SM Coursework - BRICK DESTROYER
+BRICK DESTROYER
 
-#REFACTORING ACTIVITIES:
+REFACTORING ACTIVITIES:
 1) Grouped Classes that have an immediate similarity into relevant packages. 	
    - The classes `Ball` and `Rubber Ball` are in the Package `ballProperties`.
    - The classes `Brick`, `CementBrick`, `ClayBrick`, `SteelBrick` are put into the package `brickProperties`.
