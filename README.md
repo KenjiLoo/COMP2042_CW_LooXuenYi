@@ -21,7 +21,7 @@ REFACTORING ACTIVITIES:
    - Method indenting
    - Constant break lines throughout the file
 
-#GAME ADDITIONS ACTIVITIES
+GAME ADDITIONS ACTIVITIES
 1) Added ‘background music’ to the game.
    - Implemented by using ‘AudioSystem.getAudioInputStream’ in `Main`
 2) Added a ‘view score’ to the gameplay screen.
@@ -36,15 +36,15 @@ REFACTORING ACTIVITIES:
    - Changed ‘LEVEL_COUNT’ in `Wall` and set the bricks as fully ‘steel’
 7) Changed the window title of `DebugConsole` from ‘Debug Console’ to ‘Settings (Debug Console)’.
 
-#PROJECT RELATED ADDITIONS
+PROJECT RELATED ADDITIONS
 1) Included Gradle as a build tool
 2) Included a Javadocs folder that contains the Javadocs files
    - GO TO THE `JavaDocs` FOLDER, OPEN ANY `.html` FILE
 
-#REPOSITORY
+REPOSITORY
 url: https://github.com/KenjiLoo/COMP2042_CW_hfyxl3/
 
-#JUNIT TESTS
+JUNIT TESTS
 The JUnit tests are built to test the if a method is able to run. Since Java compiles code sequentially, a variable is declared at the start of the chosen methods, and each method is set to return the test variable. If the method is able to return, the test passes.
 1) `GameFrameTest` to test methods in `GameFrame`: 
    - `initailize()` because this method renders the home menu upon running. 
@@ -54,13 +54,6 @@ The JUnit tests are built to test the if a method is able to run. Since Java com
 2) `WallTest` to test methods in `Wall`:
    - `findImpacts()` because it enables ball impacts to be made. 
    - `nextLevel()` because it renders the next level.
-   
-#GIT USAGE
-![git3](https://user-images.githubusercontent.com/80972386/145713217-c9168b4b-3869-4e15-bd76-c9168e879894.GIF)
-![git2](https://user-images.githubusercontent.com/80972386/145713218-4616fccc-1a64-4e40-8c53-ca65006bab5b.GIF)
-![git1](https://user-images.githubusercontent.com/80972386/145713220-35b7ec99-a89d-4cd7-9461-634eb58ed83a.GIF)
-![git5](https://user-images.githubusercontent.com/80972386/145713222-9cdc3e28-41dc-4c0e-bf0c-51a00a7d7c40.GIF)
-![git4](https://user-images.githubusercontent.com/80972386/145713223-1568d962-6a2e-4a4e-bca4-29ccb7f3c473.GIF)
 
 
    
